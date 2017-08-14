@@ -94,7 +94,7 @@ function createTemplate(data)
                     <div>
                         ${content}
                     </div>
-        <form method='post' action='http://haricmdk.imad.hasura-app.io/comments>'
+                <form method='post' action='http://haricmdk.imad.hasura-app.io/comments'>
                 <hr/>
                   Comment:<br />
                   <textarea name='comment' id='comment'></textarea><br />
