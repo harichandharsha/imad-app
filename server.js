@@ -61,17 +61,8 @@ var articles = {
              </p>`
         
     },
-    comment:{
-        <form method='post' action='http://haricmdk.imad.hasura-app.io/comments>'
-                <hr/>
-                  Comment:<br />
-                  <textarea name='comment' id='comment'></textarea><br />
-                
-                  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
-                
-                  <input type='submit' value='Submit' />  
-                </form>
     }
+    
 };
 function createTemplate(data) 
         {
@@ -79,7 +70,6 @@ function createTemplate(data)
             var heading = data.heading;
             var date = data.date;
             var content = data.content;
-            var comment=data.comment;
             var htmlTemplate= `
             <html>
             <head>
@@ -104,7 +94,16 @@ function createTemplate(data)
                     <div>
                         ${content}
                     </div>
-                        ${comment}
+        <form method='post' action='http://haricmdk.imad.hasura-app.io/comments>'
+                <hr/>
+                  Comment:<br />
+                  <textarea name='comment' id='comment'></textarea><br />
+                
+                  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+                
+                  <input type='submit' value='Submit' />  
+                </form>
+    
                 </div>
                 
             </body>
