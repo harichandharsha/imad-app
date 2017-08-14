@@ -1,4 +1,4 @@
-//counter code
+<!DOCTYPE html>
 var button = document.getElementById('counter');
 button.onclick = function(){
     
