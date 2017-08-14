@@ -21,6 +21,14 @@ var articles = {
                         Whenever you are in any sort of trouble, people often advise you to have patience. Why, instead of advising you about the solution, do they ask you to stay calm and composed and be patient?
                      In this modern age, most of us have forgotten to be patient and get irritated very quickly over minor things like a traffic jam, stock market ups and downs, a baby crying and such things. In fact, patience is a virtue that everybody must posses. Patience makes us better people.
                     </p>`
+        comment:<br />
+        <form method='post'>
+  <textarea name='comment' id='comment'></textarea><br />
+
+  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+
+  <input type='submit' value='Submit' /> 
+  </form>}
     },
     'article-two' : {
         title:'Article two | Harichand Mudakkayil',
@@ -95,6 +103,7 @@ function createTemplate(data)
                 </div>
             </body>
             </html> `;
+        var comment=data.comment;
             return htmlTemplate;
             }
 app.get('/', function (req, res) {
