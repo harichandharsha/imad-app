@@ -22,10 +22,10 @@ var articles = {
                      In this modern age, most of us have forgotten to be patient and get irritated very quickly over minor things like a traffic jam, stock market ups and downs, a baby crying and such things. In fact, patience is a virtue that everybody must posses. Patience makes us better people.
                     </p>`
         comment:<br />
-        <form action="/html/tags/html_form_tag_action.cfm" method="post">
+        <form action="form.html" method="post">
 <div>
-<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-Enter your comments
+<textarea cols="20" rows="4" name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+Enter your comments....
 </textarea>
 </div>
 <input type="submit" value="Submit">
