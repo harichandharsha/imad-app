@@ -7,8 +7,8 @@ app.use(morgan('combined'));
 
 var articleone = {
   title:'Article one | Harichand Mudakkayil',
-  heading:'Article One'
-  date:'Aug 14,2017'
+  heading:'Article One',
+  date:'Aug 14,2017',
   content:` 
                 <p>
                     Patience is a virtue. The dictionary defines patience as the capacity to accept or tolerate delay, trouble or suffering without getting angry or upset. This is one way to put it, but it also has a deeper meaning. The word patience means the willingness to stay in the present and live the situation out to the full in the belief that something special will manifest itself to us at the right time. It goes with my favorite phrase, everything happens for a reason.
