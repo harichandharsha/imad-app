@@ -96,7 +96,7 @@ function createTemplate(data)
                     </div>
                 <form method='post' action='http://haricmdk.imad.hasura-app.io/comments'>
                 <hr/>
-                  Comment:<br />
+                  <br />
                   <textarea name='comment' id='comment'></textarea><br />
                 
                   <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
