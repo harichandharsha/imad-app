@@ -23,3 +23,20 @@ button.onclick = function(){
     request.open('GET','http://haricmdk.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+//submit name
+
+var nameInput = document.getElementById('name');
+var name=nameTnput.value;
+var submit= document.getElementById('submit_btn');
+submit.onclick=function(){
+    //make a req to the server and send the name
+    //capture a list of names and render it as a list
+    var names=['name1','name2','name3'];
+    var list='';
+    for(var i=0;i<name.length;i++){
+        list+= '<li>'+name[i]+'</li>';
+        
+    }
+    var ul=document.getElementById('namelist');
+    ul.innerHTML=list;
+};
