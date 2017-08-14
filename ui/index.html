@@ -29,6 +29,19 @@
                 <ul id="nameList">
                 </ul>
                <br>
+               <form>
+<textarea id="words" rows="10" cols="20">Enter comment</textarea>
+<input type="button" onclick="getwords()" value="Enter" /> <br>
+<p id="para"></p>
+</form>
+
+<script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("words").value = "enter"
+}
+</script>
               
   
                 
