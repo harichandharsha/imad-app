@@ -93,6 +93,14 @@ function createTemplate(data)
                         ${content}
                     </div>
                 </div>
+                <form method='post'>
+                  Comment:<br />
+                  <textarea name='comment' id='comment'></textarea><br />
+                
+                  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+                
+                  <input type='submit' value='Submit' />  
+                </form>
             </body>
             </html> `;
             return htmlTemplate;
