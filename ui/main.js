@@ -1,4 +1,4 @@
-<!DOCTYPE html>.
+<!DOCTYPE html>
 //counter code
 var button = document.getElementById('counter');
 
