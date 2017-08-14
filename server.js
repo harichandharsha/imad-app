@@ -22,13 +22,14 @@ var articles = {
                      In this modern age, most of us have forgotten to be patient and get irritated very quickly over minor things like a traffic jam, stock market ups and downs, a baby crying and such things. In fact, patience is a virtue that everybody must posses. Patience makes us better people.
                     </p>`
         comment:<br />
-        <form method='post'>
-  <textarea name='comment' id='comment'></textarea><br />
-
-  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
-
-  <input type='submit' value='Submit' /> 
-  </form>}
+        <form action="/html/tags/html_form_tag_action.cfm" method="post">
+<div>
+<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+Enter your comments
+</textarea>
+</div>
+<input type="submit" value="Submit">
+</form>
     },
     'article-two' : {
         title:'Article two | Harichand Mudakkayil',
