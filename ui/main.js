@@ -92,7 +92,7 @@ submit1.onclick = function(){
             //take some action
             if(request1.status===200){
             var comments=request1.responseText;
-            names=JSON.parse(comments);
+            comments=JSON.parse(comments);
              var list = '';
             for(var i=0; i<comments.length;i++){
             list += '<li>'+comments[i]+'</li>';
