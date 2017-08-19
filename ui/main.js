@@ -72,10 +72,7 @@ submit1.onclick = function(){
             var comments=request1.responseText;
             comments=JSON.parse(comments);
              var com = " ";
-            for(var i=0; i<comments.length;i++){
             com += '<li>'+comments[i]+'</li>';
-        
-    }
     var ol = document.getElementById('commentList');
     ol.innerHTML = com;   
             }
