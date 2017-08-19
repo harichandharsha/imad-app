@@ -85,6 +85,6 @@ submit1.onclick = function(){
     //make req
     var commentInput = document.getElementById('comments');
     var comments = commentInput.value;
-    request.open('GET','http://haricmdk.imad.hasura-app.io/comments' + com,true);
+    request.open('GET','http://haricmdk.imad.hasura-app.io/comment?comments=' + com,true);
     request.send(null);
 };
