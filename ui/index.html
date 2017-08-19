@@ -22,18 +22,13 @@
                     
                 </ul>
                <form>
-                    <textarea id="words" rows="30" cols="20">Enter comment</textarea>
-                    <input type="button" onclick="getwords()" value="Enter" />
-                    </form>
+                    <textarea id="words" rows="10" cols="20">Enter comment</textarea>
+                     <input type="text" id="comments" placeholder="comments"></input>
+                <input type="submit" value="Submit" id="submit_btn"></input>
+                <ul id="commentlist">
                     
-                    <script type="text/javascript">
-                    function getwords(){
-                    text = words.value;
-                    document.getElementById("para").innerHTML = text
-                    document.getElementById("words").innerHTML = "enter"
-                    }
-                    </script>
-
+                </ul>
+                </form>
             </div>
         </div>
         <script type="text/javascript" src="/ui/main.js"></script>
