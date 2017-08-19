@@ -21,15 +21,19 @@
                 <ul id="namelist">
                     
                 </ul>
-                <form method='post' action='/comments'>
-                <hr/>
-                  <br />
-                  <textarea name='comment' id='comment' cols="70" rows="10"></textarea><br />
-                
-                  <input type='text' name='comments' id='comments' />
-                
-                  <input type='submit' value='Submit'id='submit_btn' />  
-                </form>
+               <form>
+                    <textarea id="words" rows="30" cols="20">Enter comment</textarea>
+                    <input type="button" onclick="getwords()" value="Enter" />
+                    </form>
+                    
+                    <script type="text/javascript">
+                    function getwords(){
+                    text = words.value;
+                    document.getElementById("para").innerHTML = text
+                    document.getElementById("words").innerHTML = "enter"
+                    }
+                    </script>
+
             </div>
         </div>
         <script type="text/javascript" src="/ui/main.js"></script>
