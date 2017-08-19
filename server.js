@@ -94,20 +94,7 @@ function createTemplate(data)
                     <div>
                         ${content}
                     </div>
-                <form method='post' action='/comments'>
-                <hr/>
-                  <br />
-                  <textarea name='comment' id='comments' cols="70" rows="10"></textarea><br />
-                
-                  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
-                
-                  <input type='submit' value='Submit'id='submit_btn' />  
-                </form>
-    
-                </div>
-                
-            </body>
-            </html> `;
+                `;
             return htmlTemplate;
             }
 app.get('/', function (req, res) {
