@@ -79,7 +79,7 @@ button1.onclick = function(){
     request1.open('GET','http://haricmdk.imad.hasura-app.io/comments',true);
     request1.send(null);
 };
-var submit1 = document.getElementById('comments');
+var submit1 = document.getElementById('submit_btn1');
 submit1.onclick = function(){
     //make a req to the server and send the name
     //capture a list of names and render it as a list
@@ -98,7 +98,7 @@ submit1.onclick = function(){
             list += '<li>'+comments[i]+'</li>';
         
     }
-    var ol = document.getElementById('comments');
+    var ol = document.getElementById('commentList');
     ol.innerHTML = list;   
             }
         }
