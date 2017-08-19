@@ -93,9 +93,9 @@ submit1.onclick = function(){
             if(request1.status===200){
             var comments=request1.responseText;
             comments=JSON.parse(comments);
-             var list = '';
+             var com = '';
             for(var i=0; i<comments.length;i++){
-            list += '<li>'+comments[i]+'</li>';
+            com += '<li>'+comments[i]+'</li>';
         
     }
     var ol = document.getElementById('commentList');
