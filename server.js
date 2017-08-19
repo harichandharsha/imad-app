@@ -94,10 +94,10 @@ function createTemplate(data)
                     <div>
                         ${content}
                     </div>
-                <form method='post' action='http://haricmdk.imad.hasura-app.io/comments'>
+                <form method='comments' action='http://haricmdk.imad.hasura-app.io/comments'>
                 <hr/>
                   <br />
-                  <textarea name='comment' id='comment' cols="70" rows="10"></textarea><br />
+                  <textarea name='comment' id='comments' cols="70" rows="10"></textarea><br />
                 
                   <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
                 
