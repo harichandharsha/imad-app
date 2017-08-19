@@ -77,7 +77,7 @@ submit1.onclick = function(){
         
     }
     var ol = document.getElementById('commentList');
-    ol.innerHTML = list;   
+    ol.innerHTML = com;   
             }
         }
         //not done yet
