@@ -56,7 +56,7 @@ submit.onclick = function(){
     request.open('GET','http://haricmdk.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
 };
-
+//----------------------------------------------------------------------------------------------------------
 var submit1 = document.getElementById('submit_btn1');
 submit1.onclick = function(){
     //make a req to the server and send the name
@@ -71,7 +71,7 @@ submit1.onclick = function(){
             if(request1.status===200){
             var comments=request1.responseText;
             comments=JSON.parse(comments);
-             var com = '';
+             var com = " ";
             for(var i=0; i<comments.length;i++){
             com += '<li>'+comments[i]+'</li>';
         
