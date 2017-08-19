@@ -76,7 +76,7 @@ button.onclick = function(){
         //not done yet
     };
     //make req
-    request.open('GET','http://haricmdk.imad.hasura-app.io/counter',true);
+    request.open('GET','http://haricmdk.imad.hasura-app.io/comments',true);
     request.send(null);
 };
 var submit = document.getElementById('comments');
