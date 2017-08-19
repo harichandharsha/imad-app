@@ -130,7 +130,7 @@ app.get('/submit-name',function(req,res){//url:/submit-name?home=xxxx
 var comments=[];
 app.get('/comments',function(req,res){//url:/submit-name?home=xxxx
    //get the name from the request
-   var name=req.query.name;
+   var name=req.query.comments;
    names.push(comments);
    //JSON:JavaScript Object Notation
    res.send(JSON.stringify(comments));
