@@ -56,42 +56,42 @@ submit.onclick = function(){
     request.open('GET','http://haricmdk.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
 };
-var button = document.getElementById('comments');
-button.onclick = function(){
+var button1 = document.getElementById('comments');
+button1.onclick = function(){
     
     //create a req obj
-    var request = new XMLHttpRequest();
+    var request1 = new XMLHttpRequest();
     
     //capture the response and store it in a variable
-    request.onreadystatechange = function(){
-        if(request.readyState===XMLHttpRequest.DONE){
+    request1.onreadystatechange = function(){
+        if(request1.readyState===XMLHttpRequest.DONE){
             //take some action
-            if(request.status===200){
-            var names=request.responseText;
-            var counter = request.responseText;
-            var span = document.getElementById('comments');
-            span.innerHTML=comments.toString();
+            if(request1.status===200){
+            var comments=request1.responseText;
+            var counter1 = request1.responseText;
+            var span1 = document.getElementById('comments');
+            span1.innerHTML=comments.toString();
             }
         }
         //not done yet
     };
     //make req
-    request.open('GET','http://haricmdk.imad.hasura-app.io/comments',true);
-    request.send(null);
+    request1.open('GET','http://haricmdk.imad.hasura-app.io/comments',true);
+    request1.send(null);
 };
-var submit = document.getElementById('comments');
-submit.onclick = function(){
+var submit1 = document.getElementById('comments');
+submit1.onclick = function(){
     //make a req to the server and send the name
     //capture a list of names and render it as a list
     //create a req obj
-    var request = new XMLHttpRequest();
+    var request1 = new XMLHttpRequest();
     
     //capture the response and store it in a variable
-    request.onreadystatechange = function(){
-        if(request.readyState===XMLHttpRequest.DONE){
+    request1.onreadystatechange = function(){
+        if(request1.readyState===XMLHttpRequest.DONE){
             //take some action
-            if(request.status===200){
-            var names=request.responseText;
+            if(request1.status===200){
+            var comments=request1.responseText;
             names=JSON.parse(comments);
              var list = '';
             for(var i=0; i<comments.length;i++){
