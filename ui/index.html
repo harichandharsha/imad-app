@@ -1,61 +1,28 @@
-<!DOCTYPE html>
-//counter code
-var button = document.getElementById('counter');
-
-button.onclick = function()
-{
-    
-    //create a req obj
-    var request = new XMLHttpRequest();
-    
-    //capture the response and store it in a variable
-    request.onreadystatechange = function(){
-        if(request.readyState===XMLHttpRequest.DONE){
-            //take some action
-            if(request.status===200){
-            var names=request.responseText;
-            var counter = request.responseText;
-            var span = document.getElementById('count');
-            span.innerHTML=counter.toString();
-            }
-        }
-        //not done yet
-    };
-    //make req
-    request.open('GET','http://haricmdk.imad.hasura-app.io/counter',true);
-    request.send(null);
-};
-//submit name
-
-    
-var submit = document.getElementById('submit_btn');
-submit.onclick = function(){
-    //make a req to the server and send the name
-    //capture a list of names and render it as a list
-    //create a req obj
-    var request = new XMLHttpRequest();
-    
-    //capture the response and store it in a variable
-    request.onreadystatechange = function(){
-        if(request.readyState === XMLHttpRequest.DONE){
-            //take some action
-            if(request.status===200){
-            var names=request.responseText;
-            names=JSON.parse(names);
-             var list = '';
-            for(var i=0; i<names.length;i++){
-            list += '<li>'+names[i]+'</li>';
-        }
-    }
-    var ul = document.getElementById('nameList');
-    ul.innerHTML = list;   
-            }
-        }
-        //not done yet
-    };
-    //make req
-    var nameInput = document.getElementById('name');
-    var name = nameInput.value;
-    request.open('GET','http://haricmdk.imad.hasura-app.io/submit-name?name=' + name,true);
-    request.send(null);
- } ;
+<!doctype html>
+<html>
+    <head>
+        <link href="/ui/sytle.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="cointainer">
+            <div class="center">
+                <img id='madi' src="https://i.pinimg.com/736x/f4/2c/73/f42c731bce67daaf26bffcb6d5eb564f--film-movies.jpg">
+            </div>
+            <h3>Personal></h3>
+            <div>Hi Iam Harichand Mudakkayil</div>
+            <hr/>
+            <h3>Student</h3>
+            <hr/>
+            <div class="footer">
+                This button <button id="counter">Click Me!</button>has been clicked<span id="count">0</span>times.
+                <hr/>
+                <input type="text" id="name" placeholder="name"></input>
+                <input type="submit" value="Submit" id="submit_btn"></input>
+                <ul id="namelist">
+                    
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="/ui/main.js"></script>
+    </body>
+</html>
