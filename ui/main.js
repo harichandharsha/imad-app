@@ -98,15 +98,15 @@ submit.onclick = function(){
             list += '<li>'+comments[i]+'</li>';
         
     }
-    var ul = document.getElementById('comments');
-    ul.innerHTML = list;   
+    var ol = document.getElementById('comments');
+    ol.innerHTML = list;   
             }
         }
         //not done yet
     };
     //make req
-    var nameInput = document.getElementById('comments');
-    var name = nameInput.value;
+    var commentInput = document.getElementById('comments');
+    var comments = commentInput.value;
     request.open('GET','http://haricmdk.imad.hasura-app.io/comments' + comments,true);
     request.send(null);
 };
