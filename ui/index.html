@@ -21,6 +21,15 @@
                 <ul id="namelist">
                     
                 </ul>
+                <form method='post' action='/comments'>
+                <hr/>
+                  <br />
+                  <textarea name='comment' id='comments' cols="70" rows="10"></textarea><br />
+                
+                  <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+                
+                  <input type='submit' value='Submit'id='submit_btn' />  
+                </form>
             </div>
         </div>
         <script type="text/javascript" src="/ui/main.js"></script>
