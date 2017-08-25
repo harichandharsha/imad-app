@@ -56,32 +56,3 @@ submit.onclick = function(){
     request.open('GET','http://haricmdk.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
 };
-//----------------------------------------------------------------------------------------------------------
-var submit1 = document.getElementById('submit_btn1');
-submit1.onclick = function(){
-    //make a req to the server and send the name
-    //capture a list of names and render it as a list
-    //create a req obj
-    var request1 = new XMLHttpRequest();
-    
-    //capture the response and store it in a variable
-    request1.onreadystatechange = function(){
-        if(request1.readyState===XMLHttpRequest.DONE){
-            //take some action
-            if(request1.status===200){
-            var comments=request1.responseText;
-            comments=JSON.parse(comments);
-             var com = " ";
-            com += '<li>'+comments[i]+'</li>';
-    var ol = document.getElementById('commentList');
-    ol.innerHTML = com;   
-            }
-        }
-        //not done yet
-    };
-    //make req
-    var commentInput = document.getElementById('comments');
-    var comments = commentInput.value;
-    request1.open('GET','http://haricmdk.imad.hasura-app.io/comments' + com,true);
-    request1.send(null);
-};
