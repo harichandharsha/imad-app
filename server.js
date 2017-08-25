@@ -140,7 +140,7 @@ app.get('/submit-name',function(req,res){//url:/submit-name?home=xxxx
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-app.get('/article/:articleName',function (req,res){
+app.get('/articles/:articleName',function (req,res){
     //articleName == Article one
     //articles[articleName] == {} content object for article one
     //SELECT * FROM article WHERE title = 'aticle-one' 
