@@ -140,11 +140,21 @@ app.get('/submit-name',function(req,res){//url:/submit-name?home=xxxx
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-app.get('/:articleName',function (req,res){
+app.get('/article/:articleName',function (req,res){
     //articleName == Article one
     //articles[articleName] == {} content object for article one
-    var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+    pool.query("SELECT * FROM article WHERE tiltle = " +  req.params.articleName, function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    }else{
+        if(result.rows.lenght===0){
+            res.status(404).send('Article not found');
+        }else{
+            var articleData = result.rows[0];
+            res.send(createTemplate(articleData));      
+        }
+    }
+    });
     });
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
