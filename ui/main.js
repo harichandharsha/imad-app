@@ -31,8 +31,9 @@ function loadLoginForm () {
                   submit.value = 'Login';
               }
               loadLogin();
-          } };
+          } 
           // Not done yet
+        }
         };
     
 var submit = document.getElementById('submit_btn');
