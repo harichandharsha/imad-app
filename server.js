@@ -76,7 +76,7 @@ app.post('/create-user',function(req,res){
    var password = req.body.password;
    var salt = crypto.randomBytes(128).toStrind('hex');
    var dbString = hash(password,salt);
-   pool.query('INSERT INTO "user" (username,password) VALUES($1,$2)',[username,dbString],function(req,res) {
+   pool.query('INSERT INTO "user" (username,password) VALUES($1,$2)',[username,dbString],function(err,res) {
      if(err){
             res.status(500).send(err.toString());
         }else{
