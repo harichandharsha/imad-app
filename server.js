@@ -143,7 +143,8 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/article/:articleName',function (req,res){
     //articleName == Article one
     //articles[articleName] == {} content object for article one
-    pool.query("SELECT * FROM article WHERE tiltle = " +  req.params.articleName, function(err,result){
+    //SELECT * FROM article WHERE title = 'aticle-one' 
+    pool.query("SELECT * FROM article WHERE tiltle = ''" +  req.params.articleName + "'", function(err,result){
     if(err){
         res.status(500).send(err.toString());
     }else{
